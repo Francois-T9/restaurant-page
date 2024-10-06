@@ -1,13 +1,23 @@
 * {
    padding: 0;
+   margin: 0;
    background-color: blanchedalmond;
    font-family: 'Roboto';
 }
-
+body {
+    height: 100vh;
+}
 
 body header {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    background-color: black;
+    padding: 20px;
+    position: sticky;
+}
+
+body header img {
+    width: 50px;
 }
 
 body header nav {
@@ -15,11 +25,18 @@ body header nav {
     display: flex;
     justify-content: space-around;
     font-weight: 700;
+    background-color: inherit;
+    align-items: center;
 }
 
+body header nav buttons {
+    background-color: inherit;
+    color: white;
+}
 body header nav buttons:hover {
     cursor: pointer;
-    color: rgb(49, 49, 49);
+    color: rgb(182, 182, 182);
+    background-color: inherit;
 }
 
 #content {
@@ -27,6 +44,7 @@ body header nav buttons:hover {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 5fr 5fr;
     gap: 20px;
+    padding: 20px;
 }
 
 #content h1 {
@@ -38,4 +56,38 @@ body header nav buttons:hover {
 #content img {
     width: 400px;
     grid-row: 2;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: black;
+    padding: 20px;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    align-items: center;
+}
+
+footer p {
+    grid-column: 2;
+    display: grid;
+    background-color: inherit;
+    color: white;
+    font-weight: 700;
+    justify-self: flex-end;
+}
+footer .logos {
+    display: flex;
+    grid-column: 3;
+    background-color: inherit;
+    justify-content: space-around;
+}
+footer .logos img{
+   
+    background-color: inherit;
+}
+footer .logos img:hover{
+   
+    cursor: pointer;
 }
