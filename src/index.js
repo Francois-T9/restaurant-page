@@ -1,24 +1,32 @@
 
 
-import {} from './home.js';
-import {} from './menu.js';
+import {homePage} from './home.js';
+import {menuPage} from './menu.js';
 import "./styles.css";
+homePage();
 
-const tabButton=document.querySelectorAll("#nav-btn");
+const tabButton=document.querySelectorAll(".nav-btn");
 
-const wipePage=  () => {
+
+const wipePage=  (() => {
 
     const mainContainer=document.querySelector("#content");
    
     tabButton.forEach((elem) =>
         elem.addEventListener("click",() => {
+           
             mainContainer.replaceChildren();
-            console.log(mainContainer);
-            console.log("click");
+            if(elem.id=="home") {
+
+                homePage();
+            }
+            else if(elem.id=="menu") {
+                menuPage();
+            }
+           
         })
         
     )
     
-};
+})();
 
-console.log(wipePage());
